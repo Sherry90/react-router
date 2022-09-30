@@ -5,6 +5,8 @@ import QuoteDetail from "./pages/QuoteDetail";
 import NewQuote from "./pages/NewQuote";
 import Layout from "./components/layout/Layout";
 
+import NotFound from "./pages/NotFound";
+
 const App = () => {
   return (
     <div>
@@ -21,6 +23,9 @@ const App = () => {
           </Route>
           <Route path="/new-quote">
             <NewQuote />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Layout>
