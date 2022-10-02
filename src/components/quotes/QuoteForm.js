@@ -1,8 +1,8 @@
 import { Fragment, useRef, useState } from "react";
 import { Prompt } from "react-router-dom";
 
-import Card from "../ui/Card";
-import LoadingSpinner from "../ui/LoadingSpinner";
+import Card from "../UI/Card";
+import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
 const QuoteForm = (props) => {
@@ -22,7 +22,7 @@ const QuoteForm = (props) => {
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   };
 
-  const finishEnteingHandler = () => {
+  const finishEnteringHandler = () => {
     setIsEntering(false);
   };
 
@@ -57,7 +57,7 @@ const QuoteForm = (props) => {
             <textarea id="text" rows="5" ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button onClick={finishEnteingHandler} className="btn">
+            <button onClick={finishEnteringHandler} className="btn">
               Add Quote
             </button>
           </div>
